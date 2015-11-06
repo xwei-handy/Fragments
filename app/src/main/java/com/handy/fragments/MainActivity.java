@@ -3,6 +3,7 @@ package com.handy.fragments;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements Fragment1.Fragment1Callback {
 
@@ -24,6 +25,9 @@ public class MainActivity extends AppCompatActivity implements Fragment1.Fragmen
     @Override
     public void button1Clicked() {
         Fragment2 fragment2 = (Fragment2) getSupportFragmentManager().findFragmentById(R.id.detailFragmentContainer);
-        fragment2.changeText("Fragment1's button is clicked");
+        if (fragment2 == null)
+            Toast.makeText(this, "There isn't a fragment 2", Toast.LENGTH_SHORT).show();
+        else
+            fragment2.changeText("Fragment1's button is clicked");
     }
 }

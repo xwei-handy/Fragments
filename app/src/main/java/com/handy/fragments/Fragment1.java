@@ -15,7 +15,7 @@ public class Fragment1 extends Fragment {
         void button1Clicked();
     }
 
-    Fragment1Callback mCallback;
+    private Fragment1Callback mCallback;
 
     @Override
     public void onAttach(Context context) {
