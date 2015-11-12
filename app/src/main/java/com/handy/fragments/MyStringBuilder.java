@@ -10,4 +10,8 @@ public class MyStringBuilder {
     public String getString() {
         return string;
     }
+
+    public void reset() {
+        string = "";
+    }
 }
